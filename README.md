@@ -1,2 +1,2 @@
-# jarvis
-My personal assistant
+# J.A.R.V.I.S
+My take on personal assistants :)

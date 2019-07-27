@@ -1,0 +1,24 @@
+{
+  "name": "jarvis",
+  "version": "1.0.0",
+  "description": "Personal assistant",
+  "main": "app.js",
+  "scripts": {
+    "prestart": "npm i",
+    "start": "http-server ./ -p 8081",
+    "lint": "eslint --ext .js,.html ."
+  },
+  "author": "Rumen Petrov",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "http-server": "^0.11.1"
+  }
+}
