@@ -173,11 +173,7 @@ speechInstance.onresult = event => {
 }
 
 speechInstance.onerror = () => {
-  isListening = false
-
-  Trigger.disable()
   Status.setNoSpeach()
-
   Speak('Hey, are you there?')
 }
 
@@ -185,7 +181,5 @@ speechInstance.onend = () => {
   isListening = false
 
   Trigger.disable()
-  Status.setNoSpeach()
-
-  Speak('Hey, stop doing that?')
+  Status.setInitial()
 }
