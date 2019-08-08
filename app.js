@@ -1,5 +1,9 @@
 if (!('SpeechRecognition' in window) && !('webkitSpeechRecognition' in window)) {
-  throw new Error("Your browser doesn't support SpeechRecognition.")
+  const noSupportMessage = "Your browser doesn't support SpeechRecognition."
+
+  document.getElementById('js-nosupport').innerText = noSupportMessage
+
+  throw new Error(noSupportMessage)
 }
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
@@ -18,7 +22,7 @@ const Speak = msg => {
     return undefined
   }
 
-  const { speechSynthesis } = window
+  const { speechSynthesis, SpeechSynthesisUtterance } = window
   const speakInstance = new SpeechSynthesisUtterance()
 
   speakInstance.text = msg
@@ -109,7 +113,7 @@ const ACTION = {
     COMMAND: 'help',
     ANSWER: 'Are you looking for help? These are the available commands.',
     RESPONSE: function () {
-      let children = document.createElement('ul')
+      const children = document.createElement('ul')
 
       COMMAND_LIST.map(command => {
         const elLine = document.createElement('li')
