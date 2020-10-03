@@ -1,4 +1,4 @@
-# J.A.R.V.I.S - Just A Rather Very Intelligent System
+# JARVIS
 My take on personal assistants. :)
 
 #### Getting started
